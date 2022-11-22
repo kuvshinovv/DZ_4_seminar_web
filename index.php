@@ -11,10 +11,15 @@ $Skills[2] = ["name" => "Prygat", "pesent" => "35"];
 $Skills[3] = ["name" => "Valyatsya", "pesent" => "10"];
 
 $developer = [
+
     ["name_dev" => "Front End Developer", "date_start" => "Jan 2015", "date_end" => "Current", "description" => "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste."],
+
     ["name_dev" => "Web Developer / something.com", "date_start" => "Mar 2012", "date_end" => "Dec 2014", "description" => "Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste."],
-    ["name_dev" => "Graphic Designer / designsomething.com", "date_start" => "Jun 2010", "date_end" => "Mar 2012", "description" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit."]
-];
+
+     ["name_dev" => "Graphic Designer / designsomething.com", "date_start" => "Jun 2010", "date_end" => "Mar 2012", "description" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit."]
+
+]; 
+
 ?>
 
 <!DOCTYPE html>
@@ -61,15 +66,24 @@ $developer = [
           
           <?php 
           	for ($i = 0; $i<count($Skills); $i++){ ?>
+            
             <p><?php echo $Skills[$i]["name"]; ?></p>
           		<div class="w3-light-grey w3-round-xlarge w3-small">
             		<div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:<?php echo 						$Skills[$i]["pesent"]; ?>%">
                 	    <?php echo $Skills[$i]["pesent"]; ?>%
                     </div>
                 </div>
+          
+          	
             <?php } ?>
-                  
+          
+          
+          
+          
+          
+          
           <br>
+
           <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Языки</b></p>
           <p>Английский</p>
           <div class="w3-light-grey w3-round-xlarge">
@@ -96,23 +110,29 @@ $developer = [
       <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Опыт работы</h2>
         
+        
+        
         <div class="w3-container">
           <h5 class="w3-opacity"><b><?php echo $developer[0]["name_dev"]; ?></b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><?php echo $developer[0]["date_start"]; ?> - <span class="w3-tag w3-teal w3-round"><?php echo $developer[0]["date_end"]; ?></span></h6>
           <p><?php echo $developer[0]["description"]; ?></p>
           <hr>
         </div>
-
-        <?php for($i=1; i<count($developer); $i++){  ?>
+        
+        
+        <?php 
+          	for ($i = 1; $i<count($developer); $i++){ ?>
                 
         <div class="w3-container">
           <h5 class="w3-opacity"><b><?php echo $developer[$i]["name_dev"]; ?></b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><?php echo $developer[$i]["date_start"]; ?> - <?php echo $developer[$i]["date_end"]; ?></span></h6>
           <p><?php echo $developer[$i]["description"]; ?></p>
           <hr>
-        </div>        
+        </div>
+        
         <?php } ?>
-
+        
+        
         <div class="w3-container w3-card w3-white">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Образование</h2>
         <div class="w3-container">
